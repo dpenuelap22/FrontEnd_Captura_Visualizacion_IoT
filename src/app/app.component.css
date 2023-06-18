@@ -1,0 +1,91 @@
+/*********************************************************************************************
+Descripcion: Este archivo define los estilos CSS para los elementos de la plantilla principal de la aplicación.
+Autor: Diego Andres Peñuela Pardo
+@Copyright (c) 2023 Diego Andres Peñuela Pardo. Todos los derechos reservados. Última actualización: 17 de Mayo de 2023
+********************************************************************************************/
+
+/* Define los estilos para el contenedor de gráficos. Se usan los flexbox para la disposición y se añade un margen */
+.graficas{
+  display: flex;
+  margin: 20px;
+}
+
+/* Define los estilos para el contenedor de botones. Se usan los flexbox para la disposición y se ajusta la alineación de los elementos */
+.contenedor-botones {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+}
+
+/* Define los estilos para los botones de la aplicación. Se ajusta el color de fondo, el color de texto, el tamaño de fuente, el padding, el border radius, la opacidad y el cursor */
+.botones {
+background-color: black;
+color: rgb(255, 255, 255);
+font-size: 13px;
+padding: 21px 70px;
+border-radius: 8px;
+border: none;
+cursor: pointer;
+}
+
+/* Define el padding para la posición de los botones de voltaje, corriente y potencia */
+.posicion-voltaje{
+padding-left: 14.33%;
+}
+.posicion-corriente{
+padding-left: 10.33%;
+}
+.posicion-potencia{
+padding-left: 14.33%;
+}
+
+/* Ajusta los márgenes para los botones de voltaje y potencia */
+#btn-ocultar-Voltaje {
+margin-right: auto;
+}
+#btn-ocultar-Potencia {
+margin-left: auto;
+}
+
+/* Define el efecto de opacidad al pasar el cursor sobre los botones */
+.botones:hover {
+opacity: 0.2;
+}
+
+/* Define los estilos para los gráficos de pie y línea */
+.pie{
+  flex: 1;
+  box-shadow: 10px 10px 5px #aaaaaa;
+  margin-right: 20px;
+}
+.line{
+  flex: 1;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+/* Define los estilos para el título y la información del autor */
+h3{
+background-color:#DDDDDD ;
+padding: 1%;
+margin: 0;
+position: relative;
+height: 20%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* Define los estilos para el logotipo en la cabecera */
+header img {
+position: relative;
+top: 0;
+left: 0;
+width: 20%;
+height: 40%;
+}
+
+/* Centra el texto de los elementos h1 */
+h1 {
+text-align: center;
+}

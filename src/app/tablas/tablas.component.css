@@ -1,0 +1,22 @@
+/*Descripcion: Este archivo CSS define los estilos para los contenedores de las tablas y los paginadores de las mismas
+en el sistema de visualización de datos IoT.
+Autor: Diego Andres Peñuela Pardo
+@Copyright (c) 2023 Diego Andres Peñuela Pardo. Todos los derechos reservados. Última actualización: 17 de Mayo de 2023*/
+
+
+/* Clase para el contenedor de las tablas */
+.tabla-container {
+  display: flex;              /* Habilita el diseño flexible */
+  flex-direction: row;        /* Define la dirección principal como horizontal */
+  justify-content: space-around; /* Distribuye los elementos de manera uniforme a lo largo de la línea con espacio alrededor de ellos */
+  flex-wrap: wrap;            /* Permite que los elementos se ajusten en múltiples líneas si es necesario */
+}
+
+/* Clase para los paginadores de las tablas */
+.paginator {
+  font-size: 0.4em;           /* Define el tamaño de la fuente del paginador */
+  padding: 0.1em;             /* Define el espacio alrededor del contenido del paginador */
+}
+
+
+

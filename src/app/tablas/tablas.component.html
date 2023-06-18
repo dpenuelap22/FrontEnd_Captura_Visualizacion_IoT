@@ -1,0 +1,68 @@
+<!--
+Descripcion: Este archivo HTML define la estructura de las tablas de datos para la visualización de la información de Voltaje, Corriente
+ y Potencia en el sistema de captura y visualización de datos IoT.
+Autor:  Diego Andres Peñuela Pardo
+@Copyright (c) 2023  Diego Andres Peñuela Pardo. Todos los derechos reservados. Última actualización: 17 de Mayo de 2023
+-->
+
+<div class="tabla-container">
+  <!-- Tabla para visualizar los datos de voltaje -->
+  <p-table [value]="tablas" [paginator]="true" [rows]="4" [tableStyle]="{ 'width': '100%' }">
+    <!-- Cabecera de la tabla -->
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Fecha de toma de dato</th>
+            <th>Hora de toma de dato</th>
+            <th>Voltaje m[V]</th>
+        </tr>
+    </ng-template>
+    <!-- Cuerpo de la tabla -->
+    <ng-template pTemplate="body" let-product>
+        <tr>
+            <td>{{ product.fecha }}</td>
+            <td>{{ product.horaInicio}}-{{ product.horaFin}}</td>
+            <td>{{ product.voltaje }}</td>
+        </tr>
+    </ng-template>
+  </p-table>
+
+  <!-- Tabla para visualizar los datos de corriente -->
+  <p-table [value]="tablas" [paginator]="true" [rows]="4" [tableStyle]="{ 'width': '100%' }">
+    <!-- Cabecera de la tabla -->
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Fecha de toma de dato</th>
+            <th>Hora de toma de dato</th>
+            <th>Corriente m[A]</th>
+        </tr>
+    </ng-template>
+    <!-- Cuerpo de la tabla -->
+    <ng-template pTemplate="body" let-product>
+        <tr>
+            <td>{{ product.fecha }}</td>
+            <td>{{ product.horaInicio}}-{{ product.horaFin}}</td>
+            <td>{{ product.corriente }}</td>
+        </tr>
+    </ng-template>
+  </p-table>
+
+  <!-- Tabla para visualizar los datos de potencia -->
+  <p-table [value]="tablas" [paginator]="true" [rows]="4" [tableStyle]="{ 'width': '100%' }">
+    <!-- Cabecera de la tabla -->
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Fecha de toma de dato</th>
+            <th>Hora de toma de dato</th>
+            <th>Potencia K[W]</th>
+        </tr>
+    </ng-template>
+    <!-- Cuerpo de la tabla -->
+    <ng-template pTemplate="body" let-product>
+        <tr>
+            <td>{{ product.fecha }}</td>
+            <td>{{ product.horaInicio}}-{{ product.horaFin}}</td>
+            <td>{{ product.potencia }}</td>
+        </tr>
+    </ng-template>
+  </p-table>
+</div>

@@ -1,0 +1,48 @@
+<!-- 
+Descripcion: Este archivo es la plantilla HTML principal del proyecto, que muestra los componentes
+de la aplicación incluyendo encabezado, título, botones, gráficos y la tabla de datos.
+Autor: Diego Andres Peñuela Pardo
+@Copyright (c) 2023 Diego Andres Peñuela Pardo. Todos los derechos reservados. Última actualización: 17 de Mayo de 2023
+********************************************************************************************/-->
+
+<!-- Cabecera con el logotipo de la Universidad Nacional de Colombia -->
+<header>
+  <img src="{{logo}}" alt="Universidad Nacional de Colombia">
+</header>
+
+<!-- Título principal de la aplicación -->
+<h1>Desarrollo de un sistema web de captura y visualización de datos por medio de un dispositivo IoT</h1>
+
+<!-- Contenedor para los botones que controlan la visualización de los gráficos -->
+<div class="contenedor-botones">
+  <!-- Botón para controlar la visualización del gráfico de voltaje -->
+  <div class="posicion-voltaje">
+    <button id="btn-ocultar-Voltaje" (click)="OcultarVoltaje()" class="botones">{{textoBotonVoltaje}}</button>
+  </div>
+  <!-- Botón para controlar la visualización del gráfico de corriente -->
+  <div class="posicion-corriente">
+    <button id="btn-ocultar-Corriente" (click)="OcultarCorriente()" class="botones">{{textoBotonCorriente}}</button>
+  </div>
+  <!-- Botón para controlar la visualización del gráfico de potencia -->
+  <div class="posicion-potencia">
+    <button id="btn-ocultar-Potencia" (click)="OcultarPotencia()" class="botones">{{textoBotonPotencia}}</button>
+  </div>
+</div>
+
+<!-- Contenedor para los gráficos. Cada gráfico puede ser ocultado por los botones correspondientes -->
+<div class="graficas">
+  <div class="lineVoltaje" [chart]="VoltajePlot" [hidden]="DisplayPlotVoltaje">
+  </div>
+  <div class="lineCorriente" [chart]="CorrientePlot" [hidden]="DisplayPlotCorriente">
+  </div>
+  <div class="linePotencia" [chart]="PotenciaPlot"[hidden]="DisplayPlotPotencia">
+  </div>
+</div>
+
+<!-- Componente que muestra la tabla de datos -->
+<app-tablas></app-tablas>
+
+<!-- Información de contacto del autor -->
+<h3>Autor</h3>
+<h3>Diego Andres Peñuela Pardo</h3>
+<h3>Dpenuelap@unal.edu.co</h3>
